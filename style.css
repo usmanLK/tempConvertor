@@ -1,0 +1,103 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-image: url('https://i.pinimg.com/originals/c7/d6/de/c7d6de414e9ba237b0601fc453bdc90b.jpg');
+    background-color: black;
+    color: white;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+}
+.button-box {
+    width: 220px;
+    margin: 35px auto;
+    position: relative;
+    border-radius: 30px;
+    background-color: #000000;
+    border: 3px solid #ff6600;
+}
+.toggle-btn {
+    padding: 10px 40px;
+    cursor: pointer;
+    background:transparent;
+    border: 0;
+    position: relative;
+    text-align: center;
+    color: white;
+    font-weight: 800;
+}
+#btn {
+    left: 0;
+    top: 0;
+    position: absolute;
+    width: 110px;
+    height: 100%;
+    background: #ff6600;
+    border-radius: 30px;
+    transition: .5s;
+}
+
+.title{
+    font-size: 3rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+.to{
+    cursor: pointer;
+    font-size: 2rem;
+    text-transform: lowercase;
+    color: #eb3b5a;
+}
+.to:hover{
+    color: yellow;
+    font-size: 3rem;
+}
+
+form {
+    padding: 20px 40px;
+    }
+    
+    .form-group {
+    position: relative;
+    padding: 20px 0;
+    width: 300px;
+    max-width: 100%;
+    }
+    
+    input {
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #9e9e9e;
+    color: #ffffff;
+    font-size: 16px;
+    padding: 10px 0;
+    display: block;
+    width: 100%;
+    font-size: 3rem;
+    text-align: center;
+    }
+    
+     input:valid,
+     input:focus {
+    border-bottom-color: #ee6e73;
+    outline: none;
+    }
+    
+     input:valid + label,
+     input:focus + label {
+    color: #ee6e73;
+    font-size: 14px;
+    transform: translateY(0);
+    }
+
+    .form-box{
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+    }

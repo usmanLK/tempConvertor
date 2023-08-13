@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Celsius to Fahrenheit converter</title>
+    <link rel="stylesheet" href='style.css'>
+</head>
+<body>
+    <div class="form-box">
+        <div class="button-box">
+            <div id="btn"></div>
+            <button type="button" class="toggle-btn" onclick="leftClick()">C</button>
+            <button type="button" class="toggle-btn" onclick="rightClick()">F</button>
+        </div>
+    </div>
+    <div>
+        <p id="title" class="title">Celsius <span class="to">to</span> Fahrenheit</p>
+        <p id="output" class="title"></span></p>
+      
+            <input id="temp" type="text" onkeyup="calculateTemp(this.value)" required/>
+         
+    </div>
+
+
+    <script>
+        var btn = document.getElementById('btn')
+        var title = document.getElementById('title')
+        var status = "C"
+        function leftClick(left){
+            btn.style.left = '0'
+            title.innerHTML =  `<p id="title" class="title">Celsius  <span class="to">to</span> Fahrenheit</p>`
+            status ='C'                 
+            
+        }
+
+        function rightClick(right){
+            btn.style.left = '110px'
+            title.innerHTML =  `<p id="title" class="title">Fahrenheit  <span class="to">to</span> Celsius</p>`
+            status ='F'                       
+
+        }
+
+        function calculateTemp(val){
+            console.log(val)
+
+            if(status==='C'){
+                document.getElementById('output').innerHTML= celTOFah(val) + " "+"&#8457"
+
+            }
+            else{
+                document.getElementById('output').innerHTML= fahToCel(val) + " "+"&#8451;"
+
+            }
+            
+        }
+   
+        function celTOFah(cel){
+            let fahrenheit = ((cel*9/5)+32).toFixed(1);
+            return fahrenheit;
+}
+
+        function fahToCel(fah){
+            let celsius = ((fah-32)*5/9).toFixed(1);
+            return celsius;
+}
+   
+   </script>
+
+</body>
+</html>
